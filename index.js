@@ -7,11 +7,12 @@ const OpenAI = require("openai");
 dotenv.config();
 
 const openai = new OpenAI({
-  apiKey: process.env.API_KEY,
+  apiKey:'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',
   dangerouslyAllowBrowser: true,
 });
 app.use(cors());
 app.use(express.json());
+app.use(express.static('public'))
 
 app.get("/", (req, res) => {
   res.send("Hello World!");
